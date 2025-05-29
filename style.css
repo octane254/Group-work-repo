@@ -1,0 +1,234 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+body {
+  background-color: #000000;
+  color: #ff0000;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: #000000;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+nav a {
+  margin-left: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #cc0000;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+  background-color: #000000;
+  animation: slideUp 1s ease-out;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+  flex: 1 1 300px;
+}
+
+.hero-text a {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #ff0000;
+  color: #000000;
+  padding: 14px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text a:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+.designs {
+  text-align: center;
+  padding: 80px 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.card {
+  width: 280px;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.anime-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.icon-card, .Icon.card {
+  background-color: #111111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.icon-card:hover, .Icon.card:hover {
+  transform: translateY(-10px);
+}
+
+.intro-paragraph {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.Anime-images {
+  text-align: center;
+  margin: 60px 0 30px;
+  animation: slideUp 1s ease-out;
+}
+
+.Anime-images img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.Anime-images img:hover {
+  transform: scale(1.05);
+}
+
+button, .fancy-btn, .start-watching {
+  background-color: #ff0000;
+  color: #000000;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+button:hover, .fancy-btn:hover, .start-watching:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .anime-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-paragraph {
+    padding: 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
